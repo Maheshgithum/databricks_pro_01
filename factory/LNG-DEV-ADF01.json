@@ -1,0 +1,15 @@
+{
+	"name": "LNG-DEV-ADF01",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "582093ff-51f0-472d-bdf5-ed7e9f2756e1",
+		"tenantId": "eadc4470-4c69-4509-ac6f-483ff8b1695b"
+	}
+}

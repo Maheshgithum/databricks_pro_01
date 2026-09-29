@@ -1,0 +1,41 @@
+{
+	"name": "pl_azure_sql",
+	"properties": {
+		"activities": [
+			{
+				"name": "lkp_customer",
+				"description": "Reading the data from azure sql customer table",
+				"type": "Lookup",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource",
+						"sqlReaderQuery": "select * from dbo.customers where customerid > 2;",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
+					},
+					"dataset": {
+						"referenceName": "ds_azure_sql",
+						"type": "DatasetReference",
+						"parameters": {
+							"schema": "cxzv",
+							"table_name": "dsfdsf"
+						}
+					},
+					"firstRowOnly": false
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2026-09-28T16:56:51Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

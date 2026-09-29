@@ -1,0 +1,39 @@
+{
+	"name": "pl_email_notification",
+	"properties": {
+		"activities": [
+			{
+				"name": "send email",
+				"type": "WebActivity",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"method": "POST",
+					"headers": {
+						"Content-Type": "application/json"
+					},
+					"url": "https://prod-29.centralindia.logic.azure.com:443/workflows/1a630aa18a4c48ffb68117434080e808/triggers/When_an_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_an_HTTP_request_is_received%2Frun&sv=1.0&sig=SY9uYObfqx8IPa_oJGkrhc2DSsM_QRJC5nm81wZq3ag",
+					"body": {
+						"value": "{\"table_name\": \"@{pipeline().parameters.table_name}\"\"}",
+						"type": "Expression"
+					}
+				}
+			}
+		],
+		"parameters": {
+			"table_name": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2026-09-28T17:11:24Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
