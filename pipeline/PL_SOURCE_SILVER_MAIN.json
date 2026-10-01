@@ -55,7 +55,7 @@
 							"type": "ExecutePipeline",
 							"dependsOn": [
 								{
-									"activity": "insert in progress status",
+									"activity": "insert In_progress status in audit log",
 									"dependencyConditions": [
 										"Succeeded"
 									]
@@ -84,7 +84,7 @@
 							}
 						},
 						{
-							"name": "insert in progress status",
+							"name": "insert In_progress status in audit log",
 							"type": "Script",
 							"dependsOn": [],
 							"policy": {
@@ -113,7 +113,7 @@
 							}
 						},
 						{
-							"name": "insert in update Failed status_copy1",
+							"name": "insert update Failed status in audit log",
 							"type": "Script",
 							"dependsOn": [
 								{
