@@ -22,14 +22,6 @@
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
-					"dataset": {
-						"referenceName": "ds_azure_sql",
-						"type": "DatasetReference",
-						"parameters": {
-							"schema": "cxzv",
-							"table_name": "dsfdsf"
-						}
-					},
 					"firstRowOnly": false
 				}
 			}
